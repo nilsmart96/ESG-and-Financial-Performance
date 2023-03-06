@@ -1,0 +1,18 @@
+name: FS_Base
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - jupyter
+  - matplotlib
+  - powershell_shortcut
+  - scikit-learn
+  - graphviz
+  - python-graphviz
+  - openpyxl
+  - statsmodels
+  - seaborn
+  - black
+  - requests
+  - scipy
+prefix: C:\Users\nmart\anaconda3\envs\FS_Base
