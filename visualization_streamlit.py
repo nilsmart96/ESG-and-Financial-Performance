@@ -12,7 +12,9 @@ st.title("Mean ESG Scores by Years and Countries")
 st.subheader("Brought to you by Chia-Jung, Ian, Neelesh and Nils, a team of data science students at Frankfurt School")
 
 # ----------- Step 1 ------------
-df1 = pd.read_csv("../3) Data/main_df_no_NAN_99p.csv")
+df1 = pd.read_csv("main_df_no_NAN_99p.csv"
+                  ).groupby(["Country of Headquarters", "Year"]
+                            ).mean().reset_index().sort_values(by="Year")
 
 # ----------- Step 2 ------------
 list_countries = df1['Country of Headquarters'].unique().tolist()
