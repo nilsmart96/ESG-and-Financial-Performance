@@ -1,21 +1,11 @@
-# ESG and Financial Performance
+# ESG and Financial Performance Streamlit App
 
-Hey there!
+Solely for the purpose of hosting the streamlit app of our class project.
 
-We are a team of data science master students at Frankfurt School of Finance and Management. In this project we investigate the relationship between ESG factors and (financial) firm performance. Our final cleaned dataset consists of 6.946 individual firms with data across twenty years. Availability varies, so we end up with 50.736 observations in total.
+Streamlit App of Mean ESG Score by Year and Country:
 
-After we validated our data and completed an EDA, we proceeded to fit several ML-Models conditioned on different aspects like company size, region or industry. Our findings are in line with literature, alltough we were able to work out some interesting insights, that surprised us:
+https://nilsmart96-esg-and-financial-per-visualization-streamlit-7hykr9.streamlit.app/
 
-- Large companies (By Market Capitalization) are strongly negatively correlated to ESG Score, while very small are positively correlated.
+Repository of the project and in depth analysis of the data:
 
-- More interesting insights
-
-- Still to be discovered
-
-Description of files:
-
-1) Data Collection and Preparation -> Retrieving data from the Refinitiv Workspace Python API and steps that are needed to build our final dataset, combining general company information, ESG and financial data
-
-2) Analysis -> EDA and in depth hypthesis testing including the use of machine learning models
-
-3) Data -> Storage of all datasets that have been created during the project
+https://github.com/neelblabla/ESG-and-Financial-Performance
