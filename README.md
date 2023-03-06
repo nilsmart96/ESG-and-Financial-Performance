@@ -14,10 +14,8 @@ After we validated our data and completed an EDA, we proceeded to fit several ML
 
 Description of files:
 
-1) Data Collection -> Jupyter notebooks that retrieve data from the Refinitiv Workspace Python API and corresponding dataframes
+1) Data Collection and Preparation -> Retrieving data from the Refinitiv Workspace Python API and steps that are needed to build our final dataset, combining general company information, ESG and financial data
 
-2) Dataset Construction -> Steps that are needed to build our final dataset, combining general company information, ESG and financial data
+2) Analysis -> EDA and in depth hypthesis testing including the use of machine learning models
 
-3) Analysis -> EDA and in depth hypthesis testing including the use of machine learning models
-
-4) Data -> Storage of all datasets that have been created during the project
+3) Data -> Storage of all datasets that have been created during the project
