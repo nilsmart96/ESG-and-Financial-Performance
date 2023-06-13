@@ -10,6 +10,7 @@ st.set_page_config(page_title="Mean ESG Scores by Years and Countries", page_ico
 # Add headline and subheader
 st.title("Mean ESG Scores by Years and Countries")
 st.subheader("Brought to you by Chia-Jung, Ian, Neelesh and Nils, a team of data science students at Frankfurt School")
+st.subheader("The data for the graph consists of the yearly ESG scores of nearly 7.000 companies, resulting in more than 50.000 observations in total")
 
 # ----------- Step 1 ------------
 df_raw = pd.read_csv("main_df_no_NAN_99p.csv")
