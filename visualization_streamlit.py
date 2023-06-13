@@ -12,12 +12,15 @@ st.title("Mean ESG Scores by Years and Countries")
 st.subheader("Brought to you by Chia-Jung, Ian, Neelesh and Nils, a team of data science students at Frankfurt School")
 
 # ----------- Step 1 ------------
-df1 = pd.read_csv("main_df_no_NAN_99p.csv"
-                  ).groupby(["Country of Headquarters", "Year"]
-                            ).mean().reset_index().sort_values(by="Year")
+df_raw = pd.read_csv("main_df_no_NAN_99p.csv")
+float_columns = df_raw.select_dtypes(include=['float64'])
+index_columns = df_raw[["Country of Headquarters", "Year"]]
+df = pd.concat([float_columns, index_columns], axis=1)
+df = df.groupby(["Country of Headquarters", "Year"]
+                ).mean().reset_index().sort_values(by="Year")
 
 # ----------- Step 2 ------------
-list_countries = df1['Country of Headquarters'].unique().tolist()
+list_countries = df['Country of Headquarters'].unique().tolist()
 
 d_country_code = {}
 for country in list_countries:
@@ -30,10 +33,10 @@ for country in list_countries:
         d_country_code.update({country: ' '})
 
 for k, v in d_country_code.items():
-    df1.loc[(df1["Country of Headquarters"] == k), 'iso_alpha'] = v
+    df.loc[(df["Country of Headquarters"] == k), 'iso_alpha'] = v
 
 # ----------- Step 3 ------------
-fig = px.choropleth(data_frame=df1,
+fig = px.choropleth(data_frame=df,
                     locations="iso_alpha",
                     color="ESG Score",
                     hover_name="Country of Headquarters",
